@@ -1,0 +1,18 @@
+[
+  {
+    "username": "cats",
+    "name": "Cute Cats",
+    "followers": 12500,
+    "following": 320,
+    "likes": 45800,
+    "posts": 145
+  },
+  {
+    "username": "dogs",
+    "name": "Happy Dogs",
+    "followers": 18700,
+    "following": 410,
+    "likes": 72300,
+    "posts": 210
+  }
+]

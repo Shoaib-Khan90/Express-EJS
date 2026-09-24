@@ -17,11 +17,11 @@ app.get("/", (req, res) => {
 
 //Instagram Activity
 
-app.get ("/:username" , (req,res) => {
-  let Followers = ["Shoaib" , "Shabbir" , "Nasir" , "Saeed"]
-    let {username} = req.params;
-    res.render("instagram.ejs" , {username , Followers})
-})
+// app.get ("/:username" , (req,res) => {
+//   let Followers = ["Shoaib" , "Shabbir" , "Nasir" , "Saeed"]
+//     let {username} = req.params;
+//     res.render("instagram.ejs" , {username , Followers})
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
@@ -37,3 +37,20 @@ app.listen(port, () => {
 //     res.render("rolldice.ejs", { diceVal });
 
 // });
+
+//Instagram Data 
+
+const accounts = require("./data.json");
+
+app.get("/instagram/:username", (req, res) => {
+
+    let { username } = req.params;
+
+    let data = accounts.find((account) => {
+        return account.username === username;
+    });
+
+    console.log(data);
+
+    res.render("instagram.ejs", { data });
+});
