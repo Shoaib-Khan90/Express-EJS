@@ -6,8 +6,15 @@
     <title>Instagram</title>
 </head>
 <body>
-    <h2>This page is belongs to @ <%= username %> </h2>
+    <h2>This page is belongs to @  <%= username %> </h2>
     <button>Follow</button>
     <button>Messege</button>
+    <h1>Which account follow you </h1>
+    <ul>
+        <% 
+        for (let name of Followers) { %>
+             <li><%= name %> </li>
+       <% } %>
+    </ul>
 </body>
 </html>

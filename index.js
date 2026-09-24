@@ -18,10 +18,22 @@ app.get("/", (req, res) => {
 //Instagram Activity
 
 app.get ("/:username" , (req,res) => {
+  let Followers = ["Shoaib" , "Shabbir" , "Nasir" , "Saeed"]
     let {username} = req.params;
-    res.render("instagram.ejs" , {username})
+    res.render("instagram.ejs" , {username , Followers})
 })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+
+// Conditional Statement In Ejs
+
+// app.get("/rolldice", (req, res) => {
+
+//     let diceVal = Math.floor(Math.random() * 6) + 1;
+
+//     res.render("rolldice.ejs", { diceVal });
+
+// });
